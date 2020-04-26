@@ -68,7 +68,7 @@ function updateDigimon(req,res){
     })
 }
 function deleteDigimon(req , res){
-    let SQL = `DELETE * FROM digimonTable WHERE id=$1;`;
+    let SQL = `DELETE FROM digimonTable WHERE id=$1;`;
     let value = [req.params.id];
     client.query(SQL,value)
     .then(()=>{
