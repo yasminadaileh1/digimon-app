@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+            <div class="container">
+             <div class="card">
+                        <h1>
+                            <%= digimon.digimon_name%>
+                        </h1>
+                        <img src="<%= digimon.digimon_img%>">
+                        <p> <%= digimon.digimon_level%></p>
+                        <form action="/update/<%= digimon.id%>" method="POST">
+                            <input type="text" name="digimon_name" value="<%= digimon.digimon_name%>">
+                            <input type="text" name="digimon_img" value="<%= digimon.digimon_img%>">
+                            <input type="text" name="digimon_level" value="<%= digimon.digimon_level%>">
+                            <button> Update</button>
+                        </form>
+                        <form action="/delete/<%= digimon.id%>" method="POST">
+                            <button> delete</button>
+                        </form>
+                    </div>
+                    
+                    
+            </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

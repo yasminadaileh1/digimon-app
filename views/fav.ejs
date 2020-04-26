@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+            <div class="container">
+                <% digimon.forEach(data => { %>
+                    <div class="card">
+                        <h1>
+                            <%=data.digimon_name%>
+                        </h1>
+                        <img src="<%= data.digimon_img%>">
+                        <p> <%= data.digimon_level%></p>
+                    
+                    <button><a href="/detail/<%=data.id%>">Show Details</a></button>
+                </div>
+                    <%});%>
+            </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

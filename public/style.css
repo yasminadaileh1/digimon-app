@@ -1,0 +1,21 @@
+body{
+    width: 960px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+.card{
+    width: 230px;
+    justify-content: center;
+    background-color: cadetblue;
+    margin: 3px;
+    text-align: center;
+}
+
+
+.card img{
+    width: 200px;
+    margin-top: 5px;
+}

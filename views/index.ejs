@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+            <div class="container">
+                <% digimon.forEach(data => { %>
+                    <div class="card">
+                        <h1>
+                            <%=data.name%>
+                        </h1>
+                        <img src="<%= data.img%>">
+                        <p> <%= data.level%></p>
+                    
+                        <form action="/add" method="post">
+                            <input type="hidden" name="digimon_name" value="<%=data.name%>">
+                            <input type="hidden" name="digimon_img" value="<%=data.img%>">
+                            <input type="hidden" name="digimon_level" value="<%=data.level%>">
+                            <button> Add To Fav</button>
+
+                        </form>
+                    </div>
+                    <%});%>
+            </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
